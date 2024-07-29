@@ -1,0 +1,45 @@
+/* src/componentes/usuarioForm/UsuarioForm.css */
+
+.usuario-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.usuario-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario-form label {
+    margin-bottom: 10px;
+}
+
+.usuario-form input,
+.usuario-form select {
+    padding: 10px;
+    width: 475px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+}
+
+.usuario-form .button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.usuario-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    width: 48%; 
+}
+
+.usuario-form button:hover {
+    background-color: #555;
+}

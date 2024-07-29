@@ -1,0 +1,39 @@
+.project-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.project-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+.project-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.project-form input,
+.project-form select {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

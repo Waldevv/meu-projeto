@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sigli_db
+    ports:
+      - "3307:3306" # Alterando a porta de 3306 para 3307
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
