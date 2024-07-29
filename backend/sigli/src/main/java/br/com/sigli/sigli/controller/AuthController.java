@@ -21,7 +21,7 @@ public class AuthController {
         novoUsuario.setNome(usuarioDto.getNome());
         novoUsuario.setNomeuser(usuarioDto.getNomeuser());
         novoUsuario.setEmail(usuarioDto.getEmail());
-        novoUsuario.setPassword(usuarioDto.getPassword()); // A senha deve ser criptografada antes de ser salva
+        novoUsuario.setPassword(usuarioDto.getPassword());
         novoUsuario.setStatus(UsuarioStatus.NAO_ALOCADO);
         novoUsuario.setProjeto(null);
 
@@ -32,8 +32,7 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody UsuarioDto usuarioDto) {
         Usuario usuario = usuarioService.findByEmail(usuarioDto.getEmail());
-        if (usuario != null && usuario.getPassword().equals(usuarioDto.getPassword())) { // Validação simples, melhore com criptografia
-            // Em uma aplicação real, você retornaria um token JWT aqui
+        if (usuario != null && usuario.getPassword().equals(usuarioDto.getPassword())) {
             return ResponseEntity.ok("Login realizado com sucesso");
         }
         return ResponseEntity.status(401).body("Credenciais inválidas");
