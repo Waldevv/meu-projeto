@@ -34,8 +34,8 @@ public class Usuario {
     private String email;
 
     @NotBlank
-    @Size(max = 100) // Tamanho máximo ajustável conforme necessário
-    private String password; // Campo de senha adicionado
+    @Size(max = 100) 
+    private String password; 
 
     @Enumerated(EnumType.STRING)
     private UsuarioStatus status;
